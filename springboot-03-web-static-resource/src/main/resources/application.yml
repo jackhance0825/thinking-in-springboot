@@ -1,0 +1,12 @@
+#spring:
+#  mvc:
+#    static-path-pattern: /res/** # 静态资源访问路径，默认/**
+
+#spring:
+#  resources:
+#    static-locations: [ classpath:/haha/ ] # 自定义资源路径（使默认资源路径失效）
+
+#spring:
+#  web:
+#    resources:
+#      add-mappings: false # 禁用静态资源

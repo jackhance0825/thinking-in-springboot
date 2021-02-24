@@ -1,0 +1,10 @@
+# Project exclude paths
+/springboot-01-hello/target/
+/springboot-02-config/target/
+/springboot-03-web-static-resource/target/
+/springboot-04-web-request/target/
+/springboot-05-admin/target/
+/springboot-06-data/target/
+/springboot-07-test/target/
+/springboot-08-manage/target/
+/springboot-09-actuator-server/target/

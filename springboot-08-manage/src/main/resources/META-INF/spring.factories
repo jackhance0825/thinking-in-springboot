@@ -1,0 +1,8 @@
+org.springframework.context.ApplicationContextInitializer=\
+  com.jackhance.springboot.listener.MyApplicationContextInitializer
+
+org.springframework.context.ApplicationListener=\
+  com.jackhance.springboot.listener.MyApplicationListener
+
+org.springframework.boot.SpringApplicationRunListener=\
+  com.jackhance.springboot.listener.MySpringApplicationRunListener

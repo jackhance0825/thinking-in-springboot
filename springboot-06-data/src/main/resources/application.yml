@@ -1,0 +1,41 @@
+spring:
+    datasource:
+      # 配置 mysql 连接信息
+      url: jdbc:mysql://123.57.46.111:30001/MyBatis?useSSL=true&useUnicode=true&characterEncoding=utf8
+      username: root
+      password: Mysql630417
+      driver-class-name: com.mysql.jdbc.Driver
+
+      druid:
+        aopPatterns: com.jackhance.springboot.*  #监控SpringBean
+        filters: stat,wall     # 底层开启功能，stat（sql监控），wall（防火墙）
+        stat-view-servlet: # 配置监控页功能
+          enabled: true
+          login-username: admin
+          login-password: admin
+          reset-enable: true
+        web-stat-filter: # 监控web
+          enabled: true
+          url-pattern: /*
+          exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+        filter:
+          stat: # 对上面filters里面的stat的详细配置
+            slow-sql-millis: 1000
+            logSlowSql: true
+            enabled: true
+          wall:
+            enabled: true
+            config:
+              drop-table-allow: false
+    redis:
+      password: Redis630417
+      host: 123.57.46.111
+      port: 6379
+      client-type: jedis # 默认 lettuce
+      jedis:
+        pool:
+          max-active: 10
+          min-idle: 5
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml

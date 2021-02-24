@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>欢迎 ${username}</h1>
+<form action="/upload" method="post" enctype="multipart/form-data">
+    <label >邮箱</label><br>
+    <input type="email" name="email" class="form-control" placeholder="Enter email"><br>
+    <label >名字</label><br>
+    <input type="text" name="username" class="form-control" placeholder="Password"><br>
+    <label >头像</label><br>
+    <input type="file" name="headerImg" ><br>
+    <label >生活照</label><br>
+    <input type="file" name="photos" multiple><br>
+    <button type="submit" >提交</button>
+</form>
+<br>
+</body>
+</html>

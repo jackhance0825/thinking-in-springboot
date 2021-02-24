@@ -1,0 +1,33 @@
+management:
+  endpoints:
+    enabled-by-default: true  #默认只暴露 health 和 info Endpoint
+    web:
+      exposure:
+        include: '*' # 以web方式暴露所有端点
+
+  endpoint:   #对某个端点的具体配置
+    health:
+      show-details: always
+      enabled: true
+    info:
+      enabled: true
+    beans:
+      enabled: true
+    metrics:
+      enabled: true
+# 可视化配置
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8888
+        instance:
+          prefer-ip: true  #使用ip注册进来
+  application:
+    name: springboot-08-manage
+
+info:
+  appName: springboot-08-manage
+  appVersion: 1.0.0
+  mavenProjectName: @project.artifactId@ # 取 pom 文件 artifactId 的值
+  mavenProjectVersion: @project.version@ # 取 pom 文件 version 的值
