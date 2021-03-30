@@ -55,8 +55,8 @@ ServiceImpl<M extends BaseMapper<T>, T>
 ```yaml
 spring:
     redis:
-      password: Redis630417
-      host: 123.57.46.111
+      password: 123456
+      host: 127.0.0.1
       port: 6379
       client-type: jedis # 默认 lettuce
       jedis:
